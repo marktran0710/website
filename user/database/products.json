@@ -1,0 +1,590 @@
+[
+  {
+    "product_id": 1,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-4.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$15.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 2,
+    "name": "Fossil Women Pink Dial Chronograph Watch ES3050",
+    "image_main": "/images/product-3.jpg",
+    "image_detail": [
+      "/images/product-9.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 3,
+    "name": "Sepia Women Blue Printed Top",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 4,
+    "name": "Lakme Absolute Cheek Chromatic Day Blushes Blusher",
+    "image_main": "/images/product-2.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 5,
+    "name": "Rocia Women Maroon & Black Sandals",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 6,
+    "name": "Maxima Men Digital Multifunction Watch",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 7,
+    "name": "Flying Machine Men Beige Casual Shoes",
+    "image_main": "/images/product-5.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 8,
+    "name": "Fila Men Tremor Black Sandal",
+    "image_main": "/images/product-9.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 21,
+    "name": "Highlander Men Red Blue Checked Slim Fit Shirt",
+    "image_main": "/images/product-3.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 9,
+    "name": "Aurelia Women Printed Orange Kurtas",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 10,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 11,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 12,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 13,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 14,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 15,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 16,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 17,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 18,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 19,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  },
+  {
+    "product_id": 20,
+    "name": "Turtle Check Men Navy Blue Shirt",
+    "image_main": "/images/product-1.jpg",
+    "image_detail": [
+      "/images/product-1.jpg",
+      "/images/product-2.jpg",
+      "/images/product-3.jpg"
+    ],
+    "price": "$20.00",
+    "discount": "$12.00",
+    "rate": 4.5,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "color": [
+      "Red",
+      "Blue",
+      "Green"
+    ],
+    "information": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "description": "Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea Nonumy",
+    "quality": 15
+  }
+]

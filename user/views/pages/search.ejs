@@ -1,0 +1,105 @@
+<%- include ('../partials/header') -%>
+
+    <!-- Search Result Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+            <span class="bg-secondary pr-3">Search Result</span>
+        </h2>
+        <div class="row px-xl-5">
+            <% search_result.forEach(element=> { %>
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                    <div class="product-item bg-light mb-4 rounded" data-id="<%= element['article_id']%>">
+                        <input type="hidden" name="productId" value="<%= element['article_id']%>" />
+                        <div class="product-img position-relative overflow-hidden rounded text-center">
+                            <img class="img-fluid product-image-<%= element['article_id']%>"
+                                style="width:200px; height:250px"
+                                src="https://drive.google.com/uc?id=<%-element['image']%>"
+                                alt="<%- element['productDisplayName'].slice(0, 30) + " ..." + "not found" %>" />
+                            <div class="product-action">
+                                <button class="btn btn-outline-dark btn-square addtocart" href=""><i
+                                        class="fa fa-shopping-cart"></i></button>
+                                <button class="btn btn-outline-dark btn-square" href=""><i
+                                        class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <a class="h6 text-decoration-none text-truncate product-name-<%= element['article_id']%>"
+                                href="/detail/<%= element['article_id']%>">
+                                <small><%- element['productDisplayName']%></small>
+                            </a>
+                            <div class="d-flex align-items-center justify-content-center mt-2 ">
+                                <h5 class="product-price-<%= element['article_id']%> red-text">
+                                    <%- element['price'].toLocaleString()%> <small>vnd</small>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <!-- Search Result Start -->
+
+    <!-- Offer Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <div class="row px-xl-5">
+            <div class="col-md-6">
+                <div class="product-offer mb-30 rounded" style="height: 300px">
+                    <img class="img-fluid" src="images/offer-1.jpg" alt="" />
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="/shop" class="btn btn-primary rounded">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-offer mb-30 rounded" style="height: 300px">
+                    <img class="img-fluid" src="images/offer-2.jpg" alt="" />
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="/shop" class="btn btn-primary rounded">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offer End -->
+
+    <!-- Vendor -->
+    <div class="container-fluid py-5">
+        <div class="row px-xl-5">
+            <div class="col">
+                <div class="owl-carousel vendor-carousel">
+                    <div class="bg-light p-4 rounded">
+                        <img src="images/vendor-1.jpg" alt="" />
+                    </div>
+                    <div class="bg-light p-4 rounded">
+                        <img src="images/vendor-2.jpg" alt="" />
+                    </div>
+                    <div class="bg-light p-4 rounded">
+                        <img src="images/vendor-3.jpg" alt="" />
+                    </div>
+                    <div class="bg-light p-4 rounded">
+                        <img src="images/vendor-4.jpg" alt="" />
+                    </div>
+                    <div class="bg-light p-4 rounded">
+                        <img src="images/vendor-5.jpg" alt="" />
+                    </div>
+                    <div class="bg-light p-4 rounded">
+                        <img src="images/vendor-6.jpg" alt="" />
+                    </div>
+                    <div class="bg-light p-4 rounded">
+                        <img src="images/vendor-7.jpg" alt="" />
+                    </div>
+                    <div class="bg-light p-4 roundedError">
+                        <img src="images/vendor-8.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+
+    <%- include ('../partials/footer') -%>

@@ -1,0 +1,99 @@
+.app.dark {
+  background-color: #111;
+  color: rgb(156, 156, 156);
+
+  .chartGrid {
+    stroke: rgba(228, 228, 228, 0.219);
+  }
+
+  .datagrid{
+    stroke: rgba(228, 228, 228, 0.219);
+    color: gray;
+  }
+
+  .table {
+    background-color: #111;
+
+    .tableCell {
+      color: gray;
+    }
+  }
+
+  .navbar {
+    color: #999;
+    border-color: #333;
+
+    .search {
+      border-color: gray;
+    }
+  }
+
+  .Sidebar {
+    background-color: #111;
+    border-color: #333;
+
+    .top {
+      .logo {
+        color: #999;
+      }
+    }
+    hr {
+      border-color: #333;
+    }
+
+    ul {
+      li {
+        &:hover {
+          background-color: #333;
+        }
+
+        .icon {
+          color: #999;
+        }
+      }
+    }
+  }
+
+  .datatable {
+    .datagrid {
+      color: gray;
+      border: none;
+
+      .viewButton,
+      .deleteButton,
+      .cellWithStatus {
+        color: gray;
+        border: none;
+      }
+    }
+  }
+
+  title{
+    color: gray;
+  }
+  input{
+      background-color: transparent;
+  }
+
+  .new{
+    color: #999;
+    border-color: #333;
+    .top{
+      color: 999;
+      .newTitle{
+        color: #999;
+      }
+    }
+  }
+
+  .productDataGrid{
+    color: #999;
+    border-color: #333;
+    border: none;
+  }
+  .userDataTable{
+    color: #999;
+    border-color: #333;
+    border: none;
+  }
+}

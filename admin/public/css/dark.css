@@ -1,0 +1,76 @@
+.app.dark {
+  background-color: #111;
+  color: rgb(156, 156, 156);
+}
+.app.dark .chartGrid {
+  stroke: rgba(228, 228, 228, 0.219);
+}
+.app.dark .datagrid {
+  stroke: rgba(228, 228, 228, 0.219);
+  color: gray;
+}
+.app.dark .table {
+  background-color: #111;
+}
+.app.dark .table .tableCell {
+  color: gray;
+}
+.app.dark .navbar {
+  color: #999;
+  border-color: #333;
+}
+.app.dark .navbar .search {
+  border-color: gray;
+}
+.app.dark .Sidebar {
+  background-color: #111;
+  border-color: #333;
+}
+.app.dark .Sidebar .top .logo {
+  color: #999;
+}
+.app.dark .Sidebar hr {
+  border-color: #333;
+}
+.app.dark .Sidebar ul li:hover {
+  background-color: #333;
+}
+.app.dark .Sidebar ul li .icon {
+  color: #999;
+}
+.app.dark .datatable .datagrid {
+  color: gray;
+  border: none;
+}
+.app.dark .datatable .datagrid .viewButton,
+.app.dark .datatable .datagrid .deleteButton,
+.app.dark .datatable .datagrid .cellWithStatus {
+  color: gray;
+  border: none;
+}
+.app.dark title {
+  color: gray;
+}
+.app.dark input {
+  background-color: transparent;
+}
+.app.dark .new {
+  color: #999;
+  border-color: #333;
+}
+.app.dark .new .top {
+  color: 999;
+}
+.app.dark .new .top .newTitle {
+  color: #999;
+}
+.app.dark .productDataGrid {
+  color: #999;
+  border-color: #333;
+  border: none;
+}
+.app.dark .userDataTable {
+  color: #999;
+  border-color: #333;
+  border: none;
+}/*# sourceMappingURL=dark.css.map */

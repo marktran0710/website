@@ -1,0 +1,17 @@
+[
+    {
+        "user_id": "",
+        "username": "",
+        "password": "",
+        "fullname": "",
+        "gender": "",
+        "email": "",
+        "phone": "",
+        "nationality": "",
+        "city": "",
+        "address": "",
+        "balance": null,
+        "delivery_address": "",
+        "avatar": ""
+    }
+]

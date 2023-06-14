@@ -1,0 +1,137 @@
+<%- include ('../partials/header') -%>
+    <div class="u-s-p-b-60">
+        <!--====== Section Content ======-->
+        <div class="section__content">
+            <div class="dash">
+                <div class="container">
+                    <div class="row">
+                        <% userInfo.forEach(element=> { %>
+
+                            <div class="col-lg-3 col-md-12">
+
+                                <!--====== Dashboard Features ======-->
+                                <div class="dash__box dash__box--bg-white dash__box--shadow u-s-m-b-30">
+                                    <div class="dash__pad-1">
+
+                                        <span class="dash__text u-s-m-b-16">Hello, <%= element['username']%></span>
+                                        <ul class="dash__f-list">
+
+                                            <li>
+
+                                                <a href="/myprofile">My Profile</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="/myorders">My Orders</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--====== End - Dashboard Features ======-->
+                            </div>
+                            <div class="col-lg-9 col-md-12">
+                                <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white">
+                                    <div class="dash__pad-2">
+                                        <h1 class="dash__h1 u-s-m-b-20">Edit Profile</h1>
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <form class="dash-edit-p" action="/editmyprofile" method="POST">
+                                                    <div class="gl-inline">
+                                                        <div class="u-s-m-b-30">
+
+                                                            <label class="gl-label" for="reg-fname">USER NAME</label>
+
+                                                            <input class="input-text input-text--primary-style"
+                                                                type="text" id="reg-fname" name="username"
+                                                                placeholder="<%=element['username']%>">
+                                                        </div>
+                                                        <div class="u-s-m-b-30">
+
+                                                            <label class="gl-label" for="reg-lname">FULL NAME</label>
+
+                                                            <input class="input-text input-text--primary-style"
+                                                                type="text" id="reg-lname" name="fullname"
+                                                                placeholder="<%=element['fullname']%>">
+                                                        </div>
+                                                    </div>
+                                                    <div class="gl-inline">
+                                                        <div class="u-s-m-b-30">
+
+                                                            <!--====== Date of Birth Select-Box ======-->
+
+                                                            <span class="gl-label">BIRTHDAY</span>
+                                                            <div class="gl-dob">
+                                                                <select class="select-box select-box--primary-style"
+                                                                    name="month">
+                                                                    <option value="">Month</option>
+                                                                    <option value="1">January</option>
+                                                                    <option value="2">February</option>
+                                                                    <option value="3">March</option>
+                                                                    <option value="4">April</option>
+                                                                    <option value="5">May</option>
+                                                                    <option value="6">June</option>
+                                                                    <option value="7">July</option>
+                                                                    <option value="8">August</option>
+                                                                    <option value="9">September</option>
+                                                                    <option value="10">October</option>
+                                                                    <option value="11">November</option>
+                                                                    <option value="12">December</option>
+                                                                </select>
+                                                                <select class="select-box select-box--primary-style"
+                                                                    name="day">
+                                                                    <option value="">Day</option>
+                                                                    <% for(let i=1;i<=31;i++) { %>
+                                                                        <option value=<%=i%>><%=i%>
+                                                                        </option>
+                                                                        <% }%>
+                                                                </select>
+                                                                <select class="select-box select-box--primary-style"
+                                                                    name="year">
+                                                                    <option value="">Year</option>
+                                                                    <% for(let i=1970;i<=2005;i++) { %>
+                                                                        <option value=<%=i%>><%=i%>
+                                                                        </option>
+                                                                        <% }%>
+                                                                </select>
+                                                            </div>
+                                                            <!--====== End - Date of Birth Select-Box ======-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="gl-inline">
+                                                        <div class="u-s-m-b-30">
+                                                            <h2 class="dash__h2 u-s-m-b-8">E-mail</h2>
+                                                            <input class="dash__text" type="text" name="email"
+                                                                placeholder=<%=element['email']%>>
+                                                        </div>
+                                                        <div class="u-s-m-b-30">
+                                                            <h2 class="dash__h2 u-s-m-b-8">Phone</h2>
+                                                            <input class="dash__text" type="text" name="phone"
+                                                                placeholder=<%=element['phone']%>>
+
+                                                        </div>
+                                                        <div class="col-lg-4 u-s-m-b-30">
+                                                            <h2 class="dash__h2 u-s-m-b-8">Address</h2>
+
+                                                            <input class="dash__text" name="address"
+                                                                placeholder="<%=element['address']%>">
+                                                            </input>
+                                                        </div>
+                                                    </div>
+
+                                                    <button class="btn btn--e-brand-b-2" type="submit">SAVE</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% })%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--====== End - Section Content ======-->
+    </div>
+    <%- include ('../partials/footer') -%>

@@ -1,0 +1,189 @@
+<%- include ('../partials/header') -%>
+  <!-- Breadcrumb Start -->
+  <div class="container-fluid">
+    <div class="row px-xl-5">
+      <div class="col-12">
+        <nav class="breadcrumb bg-light mb-30">
+          <a class="breadcrumb-item text-dark" href="#">Home</a>
+          <a class="breadcrumb-item text-dark" href="#">Shop</a>
+          <span class="breadcrumb-item active">Shopping Cart</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Breadcrumb End -->
+
+  <!-- Cart Start -->
+  <div class="container-fluid">
+    <div class="row px-xl-5">
+      <div class="col-lg-8 table-responsive mb-5">
+        <table class="table table-light table-borderless table-hover text-center mb-0 cart-table">
+          <thead class="thead-dark">
+            <tr>
+              <th>Products</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody class="align-middle cart-body">
+            <% if (!productsInCart) { %>
+              <p class="font-italic text-danger m-0 p-2">Please add the item to the cart.</p>
+              <%} else { productsInCart.forEach(element=> { %>
+                <tr class="rounded" data-id=<%=element['article_id']%>>
+                  <td class="align-middle text-center">
+                    <img class="product-image" src="https://drive.google.com/uc?export=view&id=<%-element['image']%>"
+                      alt="" style="width: 50px" />
+                    <a href="/detail/<%=element['article_id']%>" class="text-decoration-none text-dark"> <small
+                        class="d-block product-name">
+                        <%= element['productDisplayName']%>
+                      </small></a>
+
+                  </td>
+
+                  <td class="align-middle">
+                    <input class="text-center product-price" data-id=<%=element['article_id']%> style="width: 100px"
+                    disabled
+                    value="<%=element['price'].toLocaleString()%>">
+                  </td>
+
+                  <td class="align-middle">
+                    <div class="input-group quantity mx-auto" style="width: 100px">
+                      <div class="input-group-btn">
+                        <input type="number" data-id=<%=element['article_id']%> class="btn btn-sm btn-primary w-50
+                        product-quantity"
+                        value="<%=element['quantity']%>" onchange="updateOutput(<%=element['article_id']%>)">
+                      </div>
+                    </div>
+                  </td>
+                  <td class="align-middle cart-total">
+                    <input class="text-center product-total" disabled data-id=<%=element['article_id']%>
+                    value="<%=(element['quantity'] * element['price']).toLocaleString() %>">
+                  </td>
+                  <td class="align-middle">
+                    <button class="btn btn-sm btn-danger btn-remove-item-cart" data-id=<%=element["article_id"]%>
+                      onclick="removeItemInCart(<%=element['article_id']%>)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                  </td>
+                  <% });} %>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-4">
+        <h5 class="section-title position-relative text-uppercase mb-3">
+          <span class="bg-secondary pr-3">Cart Summary</span>
+        </h5>
+        <div class="bg-light p-30 mb-5">
+          <div class="border-bottom">
+            <div class="d-flex justify-content-between align-items-start">
+              <h6 class="font-weight-medium">Subtotal</h6>
+              <h6 class="font-weight-medium cart-subtotal"></h6>
+            </div>
+          </div>
+          <div class="border-bottom pt-2">
+            <div class="d-flex justify-content-between align-items-center">
+              <h6 class="font-weight-medium">Shipping fee</h6>
+              <h6 class="font-weight-medium">30,000</h6>
+            </div>
+          </div>
+          <div class="pt-2">
+            <div class="d-flex justify-content-between mt-2">
+              <h5>Total</h5>
+              <h5 class="cart-total-money"></h5>
+            </div>
+            <a href="/checkout"
+              class="post-order btn btn-block btn-primary btn-proceed-checkout font-weight-bold my-3 py-3">
+              Proceed To Checkout
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cart End -->
+  <script>
+    //Click all 
+    // const clickAll = () => {
+    //   let check_all = $("input[type=checkbox].click-all").is(":checked")
+    //   let all_checkbox_inputs = $("input[type=checkbox].select-item")
+    //   if (check_all) {
+    //     for (let i = 0; i < all_checkbox_inputs.length; i++) {
+    //       all_checkbox_inputs[i].checked = true
+    //     }
+    //     $("input[type=checkbox].click-all").attr("checked", true);
+    //   }
+    //   else {
+    //     for (let i = 0; i < all_checkbox_inputs.length; i++) {
+    //       all_checkbox_inputs[i].checked = false
+    //     }
+    //     $("input[type=checkbox].click-all").attr("checked", false);
+    //   }
+    // }
+
+    //Update real time quanlity value of the products in cart
+    // $(document).ready(function () {
+    //   let total_costs = 0
+    //   let array_costs = $(".product-total")
+    //   $.map(array_costs, function (element) {
+    //     total_costs += parseInt(element.value)
+    //     return element.value
+    //   });
+    //   $(".total-money").text(total_costs - 30000);
+    //   $("input.product-quantity").change(function () {
+    //     let productId = $(this).attr("data-id");
+    //     let price = $(`.product-price-${productId}`).text();
+    //     let array_costs = $(".product-total")
+    //     let total_costs = 0
+    //     $(`input.product-total-${productId}`).val($(this).val() * (price));
+    //     $.map(array_costs, function (element) {
+    //       total_costs += parseInt(element.value)
+    //       return element.value
+    //     });
+    //     $(".subtotal").text(total_costs);
+    //     $(".total-money").text(total_costs - 30000);
+    //   });
+    // });
+
+    //Post item to order
+    // $(".btn-proceed-checkout").click(function (e) {
+    //   e.preventDefault();
+    //   let check_all = $("input[type=checkbox].click-all").is(":checked")
+    //   let all_products = JSON.parse(localStorage.getItem("cart"))
+    //   if (check_all) {
+    //     $.post("/checkout", { data: all_products },
+    //       function (data, textStatus, jqXHR) {
+    //         window.location.href = "/checkout"
+    //       }
+    //     );
+    //   }
+    //   else if (!check_all) {
+    //     let products_to_order = []
+    //     let all_checkbox_inputs = $("input[type=checkbox].select-item")
+    //     for (let i = 0; i < all_checkbox_inputs.length; i++) {
+    //       if (all_checkbox_inputs[i].checked) {
+    //         product = all_products.find((element) => {
+    //           if (element["id"] == all_checkbox_inputs[i].getAttribute("data-id")) {
+    //             return element
+    //           }
+    //         })
+    //         products_to_order.push(product)
+    //       }
+    //     }
+    //     // $.post("/checkout", { data: products_to_order },
+    //     //   function (data, textStatus, jqXHR) {
+    //     //     window.location = "/checkout/" + data.order_id
+    //     //   }
+    //     // ), "html";
+    //     $.post("/checkout",
+    //       { data: products_to_order },
+    //       function (data, status) {
+    //         window.location = "/creatorderdetails?order_id=" + data.order_id
+    //       });
+    //   }
+    // });
+  </script>
+  <!-- Footer Start -->
+  <%- include ('../partials/footer') -%>
+    <!-- Footer End -->

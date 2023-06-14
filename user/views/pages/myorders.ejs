@@ -1,0 +1,108 @@
+<%- include ('../partials/header') -%>
+    <div class="u-s-p-b-60">
+
+        <!--====== Section Content ======-->
+        <div class="section__content">
+            <div class="dash">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12">
+
+                            <!--====== Dashboard Features ======-->
+                            <div class="dash__box dash__box--bg-white dash__box--shadow u-s-m-b-30">
+                                <div class="dash__pad-1">
+
+                                    <span class="dash__text u-s-m-b-16">Hello, <%= userName || 'user' %></span>
+                                    <ul class="dash__f-list">
+                                        <li>
+
+                                            <a href="/myprofile">My Profile</a>
+                                        </li>
+                                        <li>
+
+                                            <a class="dash-active" href="/myorders">My Orders</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--====== End - Dashboard Features ======-->
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white u-s-m-b-30">
+                                <div class="dash__pad-2">
+                                    <h1 class="dash__h1 u-s-m-b-14">My Orders</h1>
+
+                                    <span class="dash__text u-s-m-b-30">Here you can see all products that have been
+                                        delivered.</span>
+                                    <div class="m-order__list">
+                                        <% ordersList.forEach(element=> { %>
+                                            <div class="m-order__get">
+                                                <div class="manage-o__header u-s-m-b-30">
+                                                    <div class="dash-l-r">
+                                                        <div>
+                                                            <div class="manage-o__text-2 u-c-secondary">Order #<%=
+                                                                    element['orderId'].slice(-12)%>
+                                                            </div>
+                                                            <div class="manage-o__text u-c-silver">Placed on <%=
+                                                                    element['date'].toLocaleString()%>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <!-- <div class="dash__link dash__link--brand">
+
+                                                                <a href="dash-manage-order.html">MANAGE</a>
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="manage-o__description">
+                                                    <div class="description__container">
+                                                        <% element['products'].forEach(product=> { %>
+                                                            <div class="d-flex align-items-center mb-3">
+                                                                <div class="description__img-wrap pr-3">
+
+                                                                    <img class="img-fluid"
+                                                                        style="width:50px; height:50px"
+                                                                        src="<%-product['image']%>" alt="Not Found" />
+                                                                </div>
+                                                                <div class="description-title u-c-secondary ">
+                                                                    <%= product['name']%>
+                                                                </div>
+                                                            </div>
+                                                            <%})%>
+                                                    </div>
+                                                    <div class="description__info-wrap">
+                                                        <div>
+                                                            <span class="manage-o__badge badge--processing">
+                                                                <%=element['shipping']%>
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="manage-o__text-2 u-c-silver">Quantity:<span
+                                                                    class="manage-o__text-2 u-c-secondary">
+                                                                    <%=element['products'].length%>
+                                                                </span></span>
+                                                        </div>
+                                                        <div>
+
+                                                            <span class="manage-o__text-2 u-c-silver">Total:
+                                                                <span class="manage-o__text-2 u-c-secondary">
+                                                                    <%=element['total']%>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <%})%>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--====== End - Section Content ======-->
+    </div>
+    <%- include ('../partials/footer') -%>

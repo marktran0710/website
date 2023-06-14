@@ -1,0 +1,148 @@
+============auth ===================
+WSL h@u772001
+
+docker hau77
+       H@u772001
+       JD3^FsMPR?HLM7b
+
+AWS    email
+       H@u772001
+
+Access key AKIAUIZ4MO6HWQ26TJ4I
+Secret access key qETT+Y1PhJoq5RJUfNFbbi7Aib2kJ58qWXv2myf8
+fashion-data-images
+
+aws s3 cp /path/to/local/folder s3://your-bucket-name/ --recursive
+aws s3 cp /mnt/e/graduate_thesis/Data/h-and-m-personalized-fashion-recommendations/images/summary s3://your-bucket-name/ --recursive
+
+
+
+
+Connect MongoShell in terminal
+mongosh mongodb+srv://hau772001:Hau772001@cluster0.na5r1id.mongodb.net/database
+
+Query database
+https://www.mongodb.com/docs/mongodb-shell/crud/read/#std-label-mongosh-read
+
+db.help()
+
+the video for uploading files using google drive
+https://www.youtube.com/watch?v=gErpJee99Fs
+
+
+
+Basic website 
+
+
+============= ssh =============
+file.pem set quyền owner ở windows khác linux
+ssh
+
+
+============ docker ============
+docker build . -t tagname   (in parent folder of dockerfile)
+
+docker rmi image_id (delete image)
+
+
+
+build images
+tạo tag username/tagname
+push
+
+
+docker tag myimage:latest username/myimage:latest
+docker login
+docker push username/myimage:latest
+
+
+docker pull hau77/recommend_products
+
+
+
+=============install docker ======
+ubuntu
+
+cd /usr/local
+sudo mkdir fashionshop
+
+sudo docker pull hau77/user
+docker pull hau77/recommend_products
+
+sudo touch docker-compose.yml
+
+sudo docker-compose up -d
+
+
+
+sudo apt  install docker-compose
+
+============ flask =============
+flask --app server run => default port 
+python server.py => custom port
+
+http://127.0.0.1:5000/recommend?customer_id=ffb72741f3bc3d98855703b55d34e05bc7893a5d6a99a3758cc7fa0cf65ba441&n_recs=5
+curl http://127.0.0.1:80/recommend
+
+
+=============aws CLI =============
+/usr/local/aws-cli
+upload jsondata file
+
+aws dynamodb batch-write-item --request-items
+
+
+
+==============File ================
+wc -l file.csv | awk '{print $1}' show total line
+create .bk.csv
+split -d -l 10000 largefile.csv prefix_
+
+tail -n +2 file.txt | split -l 4 - split_
+for file in transaction_*
+do
+    head -n 1 transactions_train.csv > tmp_file
+    cat "$file" >> tmp_file
+    mv -f tmp_file "$file"
+done
+
+
+
+=======================data =====================
+
+Name github https://github.com/duyet/vietnamese-namedb-crawler/blob/master/data/json/data.json
+sdt rundom
+dia chi https://www.kaggle.com/code/namngl/vietnamese-address-parser/notebook
+
+
+
+========================train ======================
+https://github.com/aliceagrawal/HM-Recommender-System-App
+
+
+
+
+==========================Data model Mongo ========
+article_id                          => id
+prod_name                           => productDisplayName
+product_type_name                   => product_type_name
+product_group_name                  
+graphical_appearance_name
+colour_group_name
+perceived_colour_value_name
+perceived_colour_master_name
+department_name	index_name          => Master Category
+index_group_name
+section_name
+garment_group_name
+detail_desc
+price
+
+
+
+=================  azure ===================
+hautran
+H@u772001
+
+
+orderCart chỉ là tạm thời nên lưu ở localStorage

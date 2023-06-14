@@ -1,0 +1,19 @@
+version: "3"
+services:
+  python:
+    build:
+      context: ./recommend_products
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./recommend_products:/app
+
+  node:
+    build:
+      context: ./user
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ./user:/app

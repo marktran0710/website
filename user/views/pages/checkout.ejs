@@ -1,0 +1,133 @@
+<%- include ('../partials/header') -%>
+
+  <!-- Breadcrumb Start -->
+  <div class="container-fluid">
+    <div class="row px-xl-5">
+      <div class="col-12">
+        <nav class="breadcrumb bg-light mb-30">
+          <a class="breadcrumb-item text-dark" href="#">Home</a>
+          <a class="breadcrumb-item text-dark" href="#">Shop</a>
+          <span class="breadcrumb-item active">Checkout</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Breadcrumb End -->
+
+  <!-- Checkout Start -->
+  <div class="container-fluid">
+    <div class="row px-xl-5">
+      <div class="col-lg-8">
+        <form id="myForm">
+          <h5 class="section-title position-relative text-uppercase mb-3">
+            <span class="bg-secondary pr-3">Billing Address</span>
+          </h5>
+          <div class="bg-light p-30 mb-5">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label>First Name</label>
+                <input class="form-control" name="firstName" type="text" placeholder="John" required />
+              </div>
+              <div class="col-md-6 form-group">
+                <label>Last Name</label>
+                <input class="form-control" name="lastName" type="text" placeholder="Doe" required />
+              </div>
+              <div class="col-md-6 form-group">
+                <label>Mobile No</label>
+                <input class="form-control" name="mobileNo" type="number" placeholder="+123 456 789" required />
+              </div>
+              <div class="col-md-6 form-group">
+                <label>City</label>
+                <input class="form-control" name="city" type="text" placeholder="Ho Chi Minh" required />
+              </div>
+              <div class="col-md-6 form-group">
+                <label>Address</label>
+                <input class="form-control" name="address" type="text" placeholder="123 Street" required />
+              </div>
+            </div>
+          </div>
+          <h5 class="section-title position-relative text-uppercase mb-3">
+            <span class="bg-secondary pr-3">Payment Methods</span>
+          </h5>
+          <div class="bg-light p-30 mb-5">
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <div class="form-group d-flex flex-column">
+                  <label>
+                    <input type="radio" id="button1" status="toggle" name="payment" value="cash"
+                      data-toggle-value="toggle1">
+                    Cash
+                  </label>
+                  <div class="toggle" data-toggle-id="toggle1">Thank you for shopping at Fashion shop.
+                    We will contact you shortly to Confirm your Order via phone before delivery.</div>
+                  <label class="mt-2">
+                    <input type="radio" id="button2" status="toggle" name="payment" value="bank"
+                      data-toggle-value="toggle2">
+                    Bank Transfer
+                  </label>
+                  <div class="toggle text-center" data-toggle-id="toggle2">Account number : 14410000280989 <br>
+                    Account holder : TRAN LE CONG HAU <br>
+                    Receiving bank : BIDV <br>
+
+                    <br> Please fill in the transfer description with the following format: [Order Code] <br>- [Phone
+                    Number] - [Recipient Name] Example: 888333 - HUYNH THI A - 0908654321 <br>
+                    <br> The above steps are to confirm the reference content of your payment.
+                    <br> After a successful transfer, please take a screenshot and send it to Fashion Shop's messenger
+                    or
+                    <br>Instagram to confirm the payment information.
+                  </div>
+                </div>
+                <div id="errorContainer" style="display: none; color: red;"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+        <h5 class="section-title position-relative text-uppercase mb-3">
+          <span class="bg-secondary pr-3">Order Total</span>
+        </h5>
+        <div class="bg-light p-30 mb-5">
+          <div class="border-bottom pt-3 pb-2">
+            <div class="d-flex justify-content-between mb-3">
+              <h6>Subtotal</h6>
+              <h6 class="font-weight-medium cart-subtotal-checkout">
+              </h6>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h6 class="font-weight-medium">Shipping</h6>
+              <h6 class="font-weight-medium">30000</h6>
+            </div>
+          </div>
+          <div class="pt-2">
+            <div class="d-flex justify-content-between mt-2">
+              <h5>Total</h5>
+              <h5 class="cart-total-money-checkout">
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="mb-5">
+          <button type="submit" id="openPopup" class="btn btn-block btn-order btn-primary font-weight-bold py-3">
+            Place Order
+          </button>
+        </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <!-- Checkout End -->
+
+  <div id="popupContainer">
+    <div id="popupContent">
+      <h2>OK</h2>
+      <p>
+        Order is successful. Please check the delivery status.</p>
+      <button id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer Start -->
+  <%- include ('../partials/footer') -%>
+    <!-- Footer End -->

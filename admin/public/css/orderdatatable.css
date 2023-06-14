@@ -1,0 +1,71 @@
+.datatable {
+  height: 80%;
+  padding: 20px;
+}
+.datatable .datatableTitle {
+  width: 100%;
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.datatable .datatableTitle .link {
+  text-decoration: none;
+  color: green;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid green;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.datatable .cellWithImg {
+  display: flex;
+  align-items: center;
+}
+.datatable .cellWithImg .cellImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.datatable .cellWithStatus {
+  padding: 5px;
+  border-radius: 5px;
+}
+.datatable .cellWithStatus.active {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.151);
+}
+.datatable .cellWithStatus.passive {
+  color: goldenrod;
+  background-color: rgba(189, 189, 3, 0.103);
+}
+.datatable .cellWithStatus.pending {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.192);
+}
+.datatable .callAction {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.datatable .callAction .viewButton {
+  display: flex;
+  align-items: center;
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: blue;
+  border: 1px solid rgba(0, 0, 255, 0.349);
+  cursor: pointer;
+}
+.datatable .callAction .deleteButton {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: red;
+  border: 1px solid rgba(255, 0, 0, 0.329);
+  cursor: pointer;
+}/*# sourceMappingURL=orderdatatable.css.map */
