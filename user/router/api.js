@@ -218,7 +218,7 @@ api.get("/getcategories", async (req, res) => {
 // PRODUCT
 api.get("/getproducts", async (req, res) => {
     const pagination = req.query.page || 1
-    let products = await Product.find({}).limit(20).skip(20 * (pagination - 1));
+    let products = await Product.find({}).limit(12).skip(12 * (pagination - 1));
     return res.json(products)
 })
 
@@ -469,19 +469,19 @@ api.post("/getproductsbyfilteringprice", async (req, res, next) => {
 
     try {
         if (minimum_limit && upper_limit) {
-            products = await Product.find({ price: { $gte: minimum_limit, $lte: upper_limit } }).limit(20).skip(20 * (pagination - 1))
+            products = await Product.find({ price: { $gte: minimum_limit, $lte: upper_limit } }).limit(12).skip(12 * (pagination - 1))
             return res.json(products)
         }
         else if (minimum_limit) {
-            products = await Product.find({ price: { $gte: minimum_limit } }).limit(20).skip(20 * (pagination - 1))
+            products = await Product.find({ price: { $gte: minimum_limit } }).limit(12).skip(12 * (pagination - 1))
             return res.json(products)
         }
         else if (upper_limit) {
-            products = await Product.find({ price: { $lte: upper_limit } }).limit(20).skip(20 * (pagination - 1))
+            products = await Product.find({ price: { $lte: upper_limit } }).limit(12).skip(12 * (pagination - 1))
             return res.json(products)
         }
         else {
-            products = await Product.find({}).limit(20)
+            products = await Product.find({}).limit(12)
             return res.json(products)
         }
     } catch (error) {
@@ -496,7 +496,7 @@ api.post("/getproductsbyfilteringcolor", async (req, res, next) => {
 
     try {
         if (colors_list) {
-            products = await Product.find({ color: { $in: [colors_list] } }).limit(20)
+            products = await Product.find({ color: { $in: [colors_list] } }).limit(12)
             return res.json(products)
         }
     } catch (error) {

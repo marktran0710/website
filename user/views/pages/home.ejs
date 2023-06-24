@@ -12,10 +12,9 @@
           </ol>
           <div class="carousel-inner rounded">
             <div class="carousel-item position-relative active" style="height: 430px">
-              <img class="position-absolute w-100 h-100" src="/images/fashion.jpg"
-                style="object-fit: cover;opacity:0.8" />
+              <img class="position-absolute w-100 h-100" src="/images/home1.jpg" style="object-fit: cover;" />
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <div class="p-3" style="max-width: 700px">
+                <!-- <div class="p-3" style="max-width: 700px">
                   <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">
                     Clothes
                   </h1>
@@ -31,13 +30,13 @@
                   <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp rounded"
                     href="/shop">Shop
                     Now</a>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="carousel-item position-relative" style="height: 430px">
-              <img class="position-absolute w-100 h-100" src="images/accessories.jpg"
-                style="object-fit: cover;opacity:0.8" />
-              <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <img class="position-absolute w-100 h-100" src="images/home2.jpg" />
+              <!-- style="object-fit: cover;opacity:0.8"  -->
+              <!-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 700px">
                   <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">
                     Accessories
@@ -53,12 +52,11 @@
                   <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop
                     Now</a>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="carousel-item position-relative" style="height: 430px">
-              <img class="position-absolute w-100 h-100" src="images/footwear.jpg"
-                style="object-fit: cover;opacity:0.8" />
-              <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <img class="position-absolute w-100 h-100" src="images/home3.jpg" style="object-fit: cover;" />
+              <!-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 700px">
                   <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">
                     Footwear
@@ -71,7 +69,7 @@
                   <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop
                     Now</a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -100,26 +98,30 @@
   <div class="container-fluid pt-5">
     <div class="row px-xl-5 pb-3">
       <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-        <div class="d-flex align-items-center bg-light mb-4 rounded" style="padding: 30px">
-          <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+        <div class="d-flex align-items-center bg-light mb-4 rounded"
+          style="padding: 30px; background-color: #EEE3CB !important">
+          <h1 class="fa fa-check text-success m-0 mr-3"></h1>
           <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-        <div class="d-flex align-items-center bg-light mb-4 rounded" style="padding: 30px">
-          <h1 class="fa fa-money-check-alt text-primary m-0 mr-3"></h1>
+        <div class="d-flex align-items-center bg-light mb-4 rounded"
+          style="padding: 30px ; background-color: #EEE3CB !important">
+          <h1 class="fa fa-money-check-alt text-success m-0 mr-3"></h1>
           <h5 class="font-weight-semi-bold m-0">Affordable price</h5>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-        <div class="d-flex align-items-center bg-light mb-4 rounded" style="padding: 30px">
-          <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
+        <div class="d-flex align-items-center bg-light mb-4 rounded"
+          style="padding: 30px ; background-color: #EEE3CB !important">
+          <h1 class="fas fa-exchange-alt text-success m-0 mr-3"></h1>
           <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-        <div class="d-flex align-items-center bg-light mb-4 rounded" style="padding: 30px">
-          <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
+        <div class="d-flex align-items-center bg-light mb-4 rounded"
+          style="padding: 30px ; background-color: #EEE3CB !important">
+          <h1 class="fa fa-phone-volume text-success m-0 mr-3"></h1>
           <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
         </div>
       </div>
@@ -134,7 +136,8 @@
     </h2>
     <div class="row px-xl-5 pb-3">
       <%{ mastercategories.forEach( element=>{ %>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+        <!-- <div class="col-lg-4 col-md-4 d-flex align-items-center  mb-4 rounded col-sm-6 pb-1"> -->
+        <div class="col-lg-4 col-md-4 col-sm-6 pb-1">
           <a class="text-decoration-none" href="">
             <div class="cat-item d-flex align-items-center mb-4 rounded">
               <div class="overflow-hidden" style="width: 100px; height: 100px">
@@ -150,6 +153,21 @@
           </a>
         </div>
         <%})} %>
+          <div class="col-lg-4 col-md-4 col-sm-6 pb-1">
+            <a class="text-decoration-none" href="">
+              <div class="cat-item d-flex align-items-center mb-4 rounded">
+                <div class="overflow-hidden" style="width: 100px; height: 100px">
+                  <img class="img-fluid" src="https://drive.google.com/uc?id=aaa" alt="Not Found" />
+                </div>
+                <div class="flex-fill pl-3">
+                  <h6>
+                    Best choice for you
+                  </h6>
+                  <small class="text-body">100 Products</small>
+                </div>
+              </div>
+            </a>
+          </div>
     </div>
   </div>
   <!-- Categories End -->
@@ -171,11 +189,11 @@
     </div>
     <div class="row px-xl-5 featured-products">
       <% products.forEach(element=> { %>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <div class="product-item bg-light mb-4 rounded" data-id="<%= element['article_id']%>">
+        <div class="col-lg-2 col-md-2 col-sm-6 pb-1 ">
+          <div class="product-item bg-light mb-4 rounded overflow-hidden" data-id="<%= element['article_id']%>">
             <input type="hidden" name="productId" value="<%= element['article_id']%>" />
             <div class="product-img position-relative overflow-hidden rounded text-center">
-              <img class="img-fluid product-image-<%= element['article_id']%>" style="width:200px; height:250px"
+              <img class="img-fluid product-image-<%= element['article_id']%>" style="width:100%; height:250px"
                 src="https://drive.google.com/uc?id=<%-element['image']%>"
                 alt="<%- element['productDisplayName'].slice(0, 30) + " ..." + "not found" %>" />
               <div class="product-action">
@@ -185,7 +203,7 @@
                     class="fa fa-search"></i></button>
               </div>
             </div>
-            <div class="text-center py-4">
+            <div class="text-center py-4 product-content overflow-hidden" style="background-color: #FFF8DE;">
               <a class="h6 text-decoration-none text-truncate product-name-<%= element['article_id']%>"
                 href="/detail/<%= element['article_id']%>">
                 <small><%- element['productDisplayName']%></small>
@@ -237,10 +255,10 @@
     </h2>
     <div class="row px-xl-5">
       <% recentProducts.forEach(element=> { %>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <div class="product-item bg-light mb-4 rounded">
+        <div class="col-lg-2 col-md-2 col-sm-6 pb-1">
+          <div class="product-item bg-light mb-4 rounded overflow-hidden">
             <div class="product-img position-relative overflow-hidden rounded text-center">
-              <img class="img-fluid product-image-<%= element['article_id']%>" style="width:200px; height:250px"
+              <img class="img-fluid product-image-<%= element['article_id']%>" style="width:100%; height:250px"
                 src="https://drive.google.com/uc?id=<%-element['image']%>"
                 alt="<%- element['productDisplayName'].slice(0, 30) + " ..." + "not found" %>" />
               <div class="product-action">
@@ -249,7 +267,7 @@
                 <button class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></button>
               </div>
             </div>
-            <div class="text-center py-4">
+            <div class="text-center py-4 product-content " style="background-color: #FFF8DE;">
               <a class="h6 text-decoration-none text-truncate product-name-<%= element['article_id']%>"
                 href="/detail/<%= element['article_id']%>">
                 <small><%- element['productDisplayName']%></small>

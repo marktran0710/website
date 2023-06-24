@@ -112,7 +112,7 @@ router.get('/checkout', async (req, res, next) => {
 router.get('/home', async (req, res, next) => {
     const userId = req.cookies.userId || null;
     const pagination = req.query.page || 1;
-    const defaultProducts = await Product.find({}).limit(20).skip(20 * (pagination - 1));
+    const defaultProducts = await Product.find({}).limit(12).skip(12 * (pagination - 1));
     const mastercategories = await MasterCategory.find({});
     let recentProducts = []
     let recommendProducts = [];
@@ -214,7 +214,7 @@ router.get('/myorders', async (req, res) => {
 })
 
 router.get('/detail/:productid', async (req, res, next) => {
-    let products = await Product.find({}).limit(20);
+    let products = await Product.find({}).limit(12);
     let product_id = parseInt(req.params.productid);
     let recommendProducts = []
 
@@ -272,7 +272,7 @@ router.post('/search', async (req, res) => {
 });
 
 router.get('/shop', async (req, res) => {
-    let products = await Product.find({}).limit(20).skip((0));
+    let products = await Product.find({}).limit(12).skip((0));
     // let mastercategories = await MasterCategory.find({}).limit(12)
     return res.render('shop', { products: products });
 });

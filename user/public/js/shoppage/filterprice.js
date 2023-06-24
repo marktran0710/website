@@ -1,9 +1,9 @@
 let template_string = (element) => {
     return `
-    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+    <div class="col-lg-2 col-md-2 col-sm-6 pb-1">
     <div class="product-item bg-light mb-4 rounded">
         <div class="product-img position-relative overflow-hidden rounded text-center">
-            <img class="img-fluid product-image-<%= element['article_id']%>" style="width:200px; height:250px"
+            <img class="img-fluid product-image-<%= element['article_id']%>" style="width:100%; height:250px"
             src="https://drive.google.com/uc?export=view&id=${element["image"]}"
             alt="${element["image"].slice(0, 30) + " ..." + "not found"}" />
             <div class="product-action">
@@ -12,7 +12,7 @@ let template_string = (element) => {
             <button class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></button>
           </div>
         </div>
-        <div class="text-center py-4">
+        <div class="text-center py-4 product-content overflow-hidden" style="background-color: #FFF8DE;">
         <a class="h6 text-decoration-none text-truncate product-name-${element["article_id"]
         }"
             href="/detail/${element["article_id"]}">

@@ -10,7 +10,7 @@ $('.pagination-page').click(function (e) {
         .done(function (response) {
             response.forEach(element => {
                 $('.featured-products').append(
-                    `<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                    `<div class="col-lg-2 col-md-2 col-sm-6 pb-1">
                     <div class="product-item bg-light mb-4 rounded" data-id="${element['article_id']}">
                     <div class="product-img rounded position-relative overflow-hidden">
                       <div class="w-100 text-center">
@@ -23,7 +23,7 @@ $('.pagination-page').click(function (e) {
                       <button class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></button>
                     </div>
                     </div >
-                    <div class="text-center py-4">
+                    <div class="text-center py-4 product-content overflow-hidden" style="background-color: #FFF8DE;">
                         <a class="h6 text-decoration-none text-truncate product-name-<%= element['article_id']%>" 
                             href="/detail/${element['article_id']}">
                             <small>${element['productDisplayName']}</small>

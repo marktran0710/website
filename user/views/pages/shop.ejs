@@ -69,11 +69,11 @@
                         </div>
                     </div>
                     <% products.forEach(element=> { %>
-                        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                        <div class="col-lg-2 col-md-2 col-sm-6 pb-1">
                             <div class="product-item bg-light mb-4 rounded">
                                 <div class="product-img position-relative overflow-hidden rounded text-center">
                                     <img class="img-fluid product-image-<%= element['article_id']%>"
-                                        style="width:200px; height:250px"
+                                        style="width:100%; height:250px"
                                         src="https://drive.google.com/uc?id=<%-element['image']%>"
                                         alt="<%- element['productDisplayName'].slice(0, 30) + " ..." + "not found" %>"
                                     />
@@ -84,7 +84,8 @@
                                                 class="fa fa-search"></i></button>
                                     </div>
                                 </div>
-                                <div class="text-center py-4">
+                                <div class="text-center py-4 product-content " style="background-color: #FFF8DE;">
+
                                     <a class="h6 text-decoration-none text-truncate product-name-<%= element['article_id']%>"
                                         href="/detail/<%= element['article_id']%>">
                                         <small><%- element['productDisplayName']%></small>
@@ -97,20 +98,21 @@
                                 </div>
                             </div>
                         </div>
-                        <% }) %>
-                            <div class="col-12">
-                                <nav>
-                                    <ul class="pagination justify-content-center d-flex">
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
                 </div>
+                <% }) %>
+                    <div class="col-12">
+                        <nav>
+                            <ul class="pagination justify-content-center d-flex">
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            </ul>
+                        </nav>
+                    </div>
             </div>
-            <!-- Shop Product End -->
         </div>
+        <!-- Shop Product End -->
+    </div>
     </div>
     <!-- Shop End -->
 
