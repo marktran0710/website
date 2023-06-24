@@ -36,7 +36,7 @@ app.use(cors());
 //Set up ejs engine and public static files
 app.set("view engine", "ejs");
 app.set("views", "./views/pages");
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '/public')))
 
 connect()
 

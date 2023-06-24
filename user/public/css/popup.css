@@ -1,0 +1,17 @@
+#popupContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#popupContent {
+  background-color: white;
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+}/*# sourceMappingURL=popup.css.map */

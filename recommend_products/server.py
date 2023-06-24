@@ -12,7 +12,7 @@ df_customer = pd.read_csv('./df_customer.csv.zip', index_col='customer_id')
 # Import final collab model
 collab_model = pickle.load(open('./collaborative_model.sav', 'rb'))
 
-LIMIT = 20
+LIMIT = 12
 
 app = Flask(__name__)
 
