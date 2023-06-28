@@ -21,18 +21,18 @@ def getPopularProducts(skip_products):
     rows = articles_df[articles_df.index.isin(result)]
     return rows.reset_index().to_dict(orient='records')[skip_products:skip_products + LIMIT]
 
-@app.route('/', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def home():
     return {"data":"No content"}
 
-@app.route('/recommend', methods=['GET'])
+@app.route('/api/recommend', methods=['GET'])
 def get_recommend():
     pagination = int(request.args.get('pagination')) if request.args.get('pagination') else 1
     skip_products = (int(pagination) - 1) * LIMIT
     return getPopularProducts(skip_products)
 
 # create a route that accepts POST requests
-@app.route('/recommend', methods=['POST'])
+@app.route('/api/recommend', methods=['POST'])
 def post_recommend():
     result = request.get_json()
     customer = result.get('customer_id', None)
