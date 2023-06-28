@@ -31,8 +31,6 @@ const api = express.Router();
 api.use(cors());
 api.use(bodyParser.json())
 
-PYTHON_HOST = process.env.PYTHON_HOST
-PYTHON_PORT = process.env.PYTHON_PORT
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -52,7 +50,7 @@ api.get('/pagination', async (req, res) => {
     const pagination = req.query.page || 1
     let products = []
 
-    await fetch(`http://${PYTHON_HOST}:${PYTHON_PORT}/recommend`, {
+    await fetch(`http://${process.env.PYTHON_HOST || localhost}:${process.env.PYTHON_PORT || 3001}/recommend`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

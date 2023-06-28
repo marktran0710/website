@@ -23,8 +23,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const router = express.Router();
-PYTHON_HOST = process.env.PYTHON_HOST
-PYTHON_PORT = process.env.PYTHON_PORT
 
 
 router.use('/', loginRoute)
@@ -118,7 +116,7 @@ router.get('/home', async (req, res, next) => {
     let recommendProducts = [];
 
     // Get recent product via sending request to the Recommend Server
-    await fetch(`http://${PYTHON_HOST}:${PYTHON_PORT}/recommend`)
+    await fetch(`http://${process.env.PYTHON_HOST || localhost}:${process.env.PYTHON_PORT || 3001}/recommend`)
         .then(response => response.json())
         .then(data => {
             recentProducts = data;
@@ -127,7 +125,7 @@ router.get('/home', async (req, res, next) => {
             recentProducts = defaultProducts;
         });
 
-    await fetch(`http://${PYTHON_HOST}:${PYTHON_PORT}/recommend`, {
+    await fetch(`http://${process.env.PYTHON_HOST || localhost}:${process.env.PYTHON_PORT || 3001}/recommend`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -219,7 +217,7 @@ router.get('/detail/:productid', async (req, res, next) => {
     let recommendProducts = []
 
     let item = await Product.findOne({ article_id: product_id }).exec();
-    await fetch(`http://${PYTHON_HOST}:${PYTHON_PORT}/recommend`)
+    await fetch(`http://${process.env.PYTHON_HOST || localhost}:${process.env.PYTHON_PORT || 3001}/recommend`)
         .then(response => response.json())
         .then(data => {
             recommendProducts = data;

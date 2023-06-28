@@ -56,4 +56,4 @@ def post_recommend():
 
 if __name__ == '__main__':
     # setting host and port flask api
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=3001)
