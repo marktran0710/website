@@ -18,7 +18,7 @@ $('.pagination-page').click(function (e) {
                           src = "https://drive.google.com/uc?export=view&id=${element['image']}" alt = "aaaa" />
                       </div >
                       <div class="product-action">
-                      <button class="btn btn-outline-dark btn-square addtocart" href=""><i
+                      <button class="btn btn-outline-dark btn-square addtocart " data-id="${element['article_id']} href=""><i
                           class="fa fa-shopping-cart"></i></button>
                       <button class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></button>
                     </div>

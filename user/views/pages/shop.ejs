@@ -78,8 +78,9 @@
                                         alt="<%- element['productDisplayName'].slice(0, 30) + " ..." + "not found" %>"
                                     />
                                     <div class="product-action">
-                                        <button class="btn btn-outline-dark btn-square addtocart" href=""><i
-                                                class="fa fa-shopping-cart"></i></button>
+                                        <button class="btn btn-outline-dark btn-square addtocart "
+                                            data-id=<%=element['article_id']%>
+                                            href=""><i class="fa fa-shopping-cart"></i></button>
                                         <button class="btn btn-outline-dark btn-square" href=""><i
                                                 class="fa fa-search"></i></button>
                                     </div>
@@ -99,15 +100,6 @@
                             </div>
                         </div>
                         <% }) %>
-                </div>
-                <div class="col-12">
-                    <nav>
-                        <ul class="pagination justify-content-center d-flex">
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </div>

@@ -211,7 +211,7 @@ router.post('/editmyprofile', async (req, res) => {
 
     let birth = null
     if (body.year && body.month && body.day) {
-        birth = new Date(body.year, body.month, body.day);
+        birth = new Date(parseInt(body.year), parseInt(body.month), parseInt(body.day));
     }
 
     if (birth) {

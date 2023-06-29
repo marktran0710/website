@@ -70,7 +70,7 @@ $(document).ready(function () {
 
 $('.addtocart').on('click', function () {
     const button = $(this);
-    const productId = button.closest(".product-item").attr("data-id");
+    const productId = button.attr("data-id");
     let value = $(".numberItemsInCart").text();
     let number = parseInt(value);
     number++;

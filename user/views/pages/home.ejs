@@ -137,7 +137,7 @@
     <div class="row px-xl-5 pb-3">
       <%{ mastercategories.forEach( element=>{ %>
         <!-- <div class="col-lg-4 col-md-4 d-flex align-items-center  mb-4 rounded col-sm-6 pb-1"> -->
-        <div class="col-lg-4 col-md-4 col-sm-6 pb-1">
+        <div class="col-lg-4 col-md-4 col-sm-6 pb-1 ">
           <a class="text-decoration-none" href="">
             <div class="cat-item d-flex align-items-center mb-4 rounded">
               <div class="overflow-hidden" style="width: 100px; height: 100px">
@@ -147,27 +147,11 @@
                 <h6>
                   <%= element['name']%>
                 </h6>
-                <small class="text-body">100 Products</small>
               </div>
             </div>
           </a>
         </div>
         <%})} %>
-          <div class="col-lg-4 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-              <div class="cat-item d-flex align-items-center mb-4 rounded">
-                <div class="overflow-hidden" style="width: 100px; height: 100px">
-                  <img class="img-fluid" src="https://drive.google.com/uc?id=aaa" alt="Not Found" />
-                </div>
-                <div class="flex-fill pl-3">
-                  <h6>
-                    Best choice for you
-                  </h6>
-                  <small class="text-body">100 Products</small>
-                </div>
-              </div>
-            </a>
-          </div>
     </div>
   </div>
   <!-- Categories End -->
@@ -197,8 +181,8 @@
                 src="https://drive.google.com/uc?id=<%-element['image']%>"
                 alt="<%- element['productDisplayName'].slice(0, 30) + " ..." + "not found" %>" />
               <div class="product-action">
-                <button class="btn btn-outline-dark btn-square addtocart" href=""><i
-                    class="fa fa-shopping-cart"></i></button>
+                <button class="btn btn-outline-dark btn-square addtocart  " data-id=<%=element['article_id']%>
+                  href=""><i class="fa fa-shopping-cart"></i></button>
                 <button class="btn btn-outline-dark btn-square btn-search-product" href=""><i
                     class="fa fa-search"></i></button>
               </div>
@@ -262,7 +246,7 @@
                 src="https://drive.google.com/uc?id=<%-element['image']%>"
                 alt="<%- element['productDisplayName'].slice(0, 30) + " ..." + "not found" %>" />
               <div class="product-action">
-                <button class="btn btn-outline-dark btn-square addtocart" href=""><i
+                <button class="btn btn-outline-dark btn-square addtocart " data-id=<%=element['article_id']%> href=""><i
                     class="fa fa-shopping-cart"></i></button>
                 <button class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></button>
               </div>
@@ -293,13 +277,13 @@
       <div class="col">
         <div class="owl-carousel vendor-carousel">
           <div class="bg-light p-4 rounded">
-            <img src="images/vendor-1.jpg" alt="" />
+            <img src="images/vendor-9.jpg" alt="" />
           </div>
           <div class="bg-light p-4 rounded">
-            <img src="images/vendor-2.jpg" alt="" />
+            <img src="images/vendor-10.jpg" alt="" />
           </div>
           <div class="bg-light p-4 rounded">
-            <img src="images/vendor-3.jpg" alt="" />
+            <img src="images/vendor-11.jpg" alt="" />
           </div>
           <div class="bg-light p-4 rounded">
             <img src="images/vendor-4.jpg" alt="" />

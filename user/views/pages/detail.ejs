@@ -20,31 +20,6 @@
                     <p class=" mb-4">
                         Description: <%= item['detail_desc'] %>
                     </p>
-                    <div class="d-flex mb-3">
-                        <strong class="text-dark mr-3">Sizes:</strong>
-                        <form>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-1" name="size">
-                                <label class="custom-control-label" for="size-1">XS</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-2" name="size">
-                                <label class="custom-control-label" for="size-2">S</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-3" name="size">
-                                <label class="custom-control-label" for="size-3">M</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-4" name="size">
-                                <label class="custom-control-label" for="size-4">L</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-5" name="size">
-                                <label class="custom-control-label" for="size-5">XL</label>
-                            </div>
-                        </form>
-                    </div>
                     <div class="d-flex align-items-center mb-4 pt-2">
                         <button class="btn btn-primary px-3 addtocart product-item"
                             data-id="<%= item['article_id']%>"><i class="fa fa-shopping-cart mr-1"></i> Add
@@ -72,8 +47,9 @@
                                 src="https://drive.google.com/uc?export=view&id=<%-element['image']%>"
                                 alt="<%- element['productDisplayName'].slice(0, 30) + " ..." + "not found" %>" />
                             <div class="product-action">
-                                <button class="btn btn-outline-dark btn-square addtocart" href=""><i
-                                        class="fa fa-shopping-cart"></i></button>
+                                <button class="btn btn-outline-dark btn-square addtocart "
+                                    data-id=<%=element['article_id']%>
+                                    href=""><i class="fa fa-shopping-cart"></i></button>
                                 <button class="btn btn-outline-dark btn-square" href=""><i
                                         class="fa fa-search"></i></button>
                             </div>
