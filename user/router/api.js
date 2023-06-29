@@ -31,6 +31,7 @@ const api = express.Router();
 api.use(cors());
 api.use(bodyParser.json())
 
+const LIMIT = 12
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -47,21 +48,42 @@ const upload = multer({ storage: storage });
 
 api.get('/pagination', async (req, res) => {
     const userId = req.cookies.userId || null
-    const pagination = req.query.page || 1
+    const page = req.query.page || 1
     let products = []
 
-    await fetch(`${process.env.PYTHON_URI || process.env.PYTHON_LOCALHOST}/recommend`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ "customer_id": userId, "pagination": pagination })
-    })
-        .then(response => response.json())
-        .then(data => { products = data; return res.status(200).json(products).end() })
-        .catch(error => {
-            return res.status(500).json('Internal Server Error').end()
-        });
+    // Read the JSON file
+    fs.readFile('recommendationProducts.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('An error occurred while reading the file:', err);
+        } else {
+            try {
+                // Parse the JSON data
+                let products = JSON.parse(data);
+                const startIndex = (page - 1) * LIMIT;
+                // Calculate the ending index
+                const endIndex = startIndex + LIMIT;
+                // Use the slice() method to extract the desired items
+                products = products.slice(startIndex, endIndex);
+                return res.status(200).json(products).end()
+            } catch (error) {
+                return res.status(500).json('Internal Server Error').end()
+            }
+        }
+    });
+
+
+    // await fetch(`${process.env.PYTHON_URI || process.env.PYTHON_LOCALHOST}/recommend`, {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ "customer_id": userId, "pagination": pagination })
+    // })
+    //     .then(response => response.json())
+    //     .then(data => { products = data; return res.status(200).json(products).end() })
+    //     .catch(error => {
+    //         return res.status(500).json('Internal Server Error').end()
+    //     });
 
 })
 

@@ -8,6 +8,7 @@ const _ = require('lodash');
 const fs = require('fs');
 
 const checkLogin = require("../middlewares/checkLogin")
+const popularData = require('../popularData.json');
 
 const loginRoute = require('./auth/login')
 const registerRoute = require('./auth/register')
@@ -107,41 +108,61 @@ router.get('/checkout', async (req, res, next) => {
 //     res.render('checkout');
 // });
 
+// router.use('/home', async (req, res, next) => {
+//     console.log("!!!!!!!!!!!!");
+//     const userId = req.cookies.userId || null;
+
+//     await fetch(`${process.env.PYTHON_URI || process.env.PYTHON_LOCALHOST}/recommend`, {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({ "customer_id": userId })
+//     })
+//         .then(response => response.json())
+//         .then(data => {
+//             recommendProducts = data;
+//         })
+//         .catch(error => {
+//             recommendProducts = []
+//         });
+
+
+//     // Convert the object to JSON
+//     const jsonData = JSON.stringify(recommendProducts, null, 2); // The second argument is for pretty formatting, using 2 spaces for indentation
+
+//     // Write the JSON data to a file
+//     await fs.writeFile('recommendationProducts.json', jsonData, 'utf8', (err) => {
+//         if (err) {
+//             console.error('An error occurred while writing the file:', err);
+//         } else {
+//             console.log('JSON file has been written successfully 111111111.');
+//         }
+//     });
+//     next()
+// })
+
 router.get('/home', async (req, res, next) => {
     const userId = req.cookies.userId || null;
-    const pagination = req.query.page || 1;
-    const defaultProducts = await Product.find({}).limit(12).skip(12 * (pagination - 1));
+    const defaultProducts = await Product.find({}).limit(12);
     const mastercategories = await MasterCategory.find({});
-    let recentProducts = []
     let recommendProducts = [];
-    // Read the JSON file
-    fs.readFile('data.json', 'utf8', (err, data) => {
-        if (err) {
-            console.error('An error occurred while reading the file:', err);
-        } else {
-            try {
-                // Parse the JSON data
-                recentProducts = JSON.parse(data);
-            } catch (error) {
-                console.error('An error occurred while parsing the JSON:', error);
-            }
-        }
-    });
-
 
     await fetch(`${process.env.PYTHON_URI || process.env.PYTHON_LOCALHOST}/recommend`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ "customer_id": userId, "pagination": pagination })
+        body: JSON.stringify({ "customer_id": userId })
     })
         .then(response => response.json())
         .then(data => {
-            recommendProducts = data;
+            recommendProducts = data.slice(0, 12);
+            let recentProducts = popularData.slice(0, 12);
             return res.render('home', { products: recommendProducts, recentProducts: recentProducts, mastercategories: mastercategories });
         })
         .catch(error => {
+            recentProducts = popularData.slice(0, 12);
             return res.render('home', { products: defaultProducts, recentProducts: recentProducts, mastercategories: mastercategories })
         });
 });

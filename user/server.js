@@ -62,34 +62,6 @@ app.use(async (req, res, next) => {
   next()
 })
 
-app.use("/", async (req, res, next) => {
-  const defaultProducts = await Product.find({}).limit(12);
-
-  // Get recent product via sending request to the Recommend Server
-  await fetch(`${process.env.PYTHON_URI || process.env.PYTHON_LOCALHOST}/recommend`)
-    .then(response => response.json())
-    .then(data => {
-      recentProducts = data;
-    })
-    .catch(error => {
-      recentProducts = defaultProducts;
-    });
-
-  // Convert the object to JSON
-  const jsonData = JSON.stringify(recentProducts, null, 2); // The second argument is for pretty formatting, using 2 spaces for indentation
-
-  // Write the JSON data to a file
-  fs.writeFile('data.json', jsonData, 'utf8', (err) => {
-    if (err) {
-      console.error('An error occurred while writing the file:', err);
-    } else {
-      console.log('JSON file has been written successfully.');
-    }
-  });
-  next();
-})
-
-
 app.use("/", api);
 app.use("/", router);
 
