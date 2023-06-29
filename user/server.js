@@ -8,11 +8,15 @@ const mongoose = require('mongoose');
 const path = require("path");
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
+const fetch = require('node-fetch');
+const fs = require('fs');
+
 
 const router = require("./router/route");
 const api = require("./router/api");
 
 const User = require("./models/userModel");
+const Product = require('./models/productModel')
 
 
 //Get environment variables
@@ -57,6 +61,34 @@ app.use(async (req, res, next) => {
   }
   next()
 })
+
+app.use("/", async (req, res, next) => {
+  const defaultProducts = await Product.find({}).limit(12);
+
+  // Get recent product via sending request to the Recommend Server
+  await fetch(`http://${process.env.PYTHON_HOST || 'localhost'}: ${process.env.PYTHON_PORT || 3001} / recommend`)
+    .then(response => response.json())
+    .then(data => {
+      recentProducts = data;
+    })
+    .catch(error => {
+      recentProducts = defaultProducts;
+    });
+
+  // Convert the object to JSON
+  const jsonData = JSON.stringify(recentProducts, null, 2); // The second argument is for pretty formatting, using 2 spaces for indentation
+
+  // Write the JSON data to a file
+  fs.writeFile('data.json', jsonData, 'utf8', (err) => {
+    if (err) {
+      console.error('An error occurred while writing the file:', err);
+    } else {
+      console.log('JSON file has been written successfully.');
+    }
+  });
+  next();
+})
+
 
 app.use("/", api);
 app.use("/", router);

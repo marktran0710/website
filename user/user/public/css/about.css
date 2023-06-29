@@ -1,0 +1,79 @@
+/* Body and Typography Styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header Styles */
+header {
+  background-color: #ffd333;
+  padding: 20px;
+}
+
+/* Main Styles */
+main {
+  margin: 20px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #ffd333;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Link Styles */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Mobile styles */
+  /* Adjust font sizes, margins, and padding as needed */
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+}/*# sourceMappingURL=about.css.map */

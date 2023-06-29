@@ -14,7 +14,7 @@ $('.pagination-page').click(function (e) {
                     <div class="product-item bg-light mb-4 rounded" data-id="${element['article_id']}">
                     <div class="product-img rounded position-relative overflow-hidden">
                       <div class="w-100 text-center">
-                        <img style="width:75%;height: 250px;" class="img-fluid product-image-${element['article_id']} "
+                        <img style="width:100%;height: 250px;" class="img-fluid product-image-${element['article_id']} "
                           src = "https://drive.google.com/uc?export=view&id=${element['image']}" alt = "aaaa" />
                       </div >
                       <div class="product-action">
@@ -48,7 +48,7 @@ $('.pagination-page').click(function (e) {
 
         });
 
-    // fetch(`http://localhost:8080/pagination?page=${page}`)
+    // fetch(`http://'localhost':8080/pagination?page=${page}`)
     //     .then(response => {
     //         if (response.status != 200) {
     //             throw new Error('Network response was not ok');

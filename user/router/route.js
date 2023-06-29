@@ -114,18 +114,22 @@ router.get('/home', async (req, res, next) => {
     const mastercategories = await MasterCategory.find({});
     let recentProducts = []
     let recommendProducts = [];
+    // Read the JSON file
+    fs.readFile('data.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('An error occurred while reading the file:', err);
+        } else {
+            try {
+                // Parse the JSON data
+                recentProducts = JSON.parse(data);
+            } catch (error) {
+                console.error('An error occurred while parsing the JSON:', error);
+            }
+        }
+    });
 
-    // Get recent product via sending request to the Recommend Server
-    await fetch(`http://${process.env.PYTHON_HOST || localhost}:${process.env.PYTHON_PORT || 3001}/recommend`)
-        .then(response => response.json())
-        .then(data => {
-            recentProducts = data;
-        })
-        .catch(error => {
-            recentProducts = defaultProducts;
-        });
 
-    await fetch(`http://${process.env.PYTHON_HOST || localhost}:${process.env.PYTHON_PORT || 3001}/recommend`, {
+    await fetch(`http://${process.env.PYTHON_HOST || 'localhost'}:${process.env.PYTHON_PORT || 3001}/recommend`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -134,7 +138,7 @@ router.get('/home', async (req, res, next) => {
     })
         .then(response => response.json())
         .then(data => {
-            recommendProducts = data
+            recommendProducts = data;
             return res.render('home', { products: recommendProducts, recentProducts: recentProducts, mastercategories: mastercategories });
         })
         .catch(error => {
@@ -217,7 +221,7 @@ router.get('/detail/:productid', async (req, res, next) => {
     let recommendProducts = []
 
     let item = await Product.findOne({ article_id: product_id }).exec();
-    await fetch(`http://${process.env.PYTHON_HOST || localhost}:${process.env.PYTHON_PORT || 3001}/recommend`)
+    await fetch(`http://${process.env.PYTHON_HOST || "localhost"}:${process.env.PYTHON_PORT || 3001}/recommend`)
         .then(response => response.json())
         .then(data => {
             recommendProducts = data;
