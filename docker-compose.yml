@@ -5,7 +5,8 @@ services:
       context: ./recommend_products
       dockerfile: Dockerfile
     ports:
-      - 80:80
+      - ${PYTHON_PORT}:80
+    hostname: python
     volumes:
       - ./recommend_products:/app
 

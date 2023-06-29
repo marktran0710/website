@@ -37,8 +37,9 @@ def post_recommend():
     result = request.get_json()
     customer = result.get('customer_id', None)
     pagination = int(result.get('pagination')) if result.get('pagination') else 1
+    print('AAAAAAAAA')
     skip_products = (int(pagination) - 1) * LIMIT
-
+    print(pagination,skip_products, customer)
 
     if not customer:
         return getPopularProducts(skip_products)
@@ -56,4 +57,4 @@ def post_recommend():
 
 if __name__ == '__main__':
     # setting host and port flask api
-    app.run(host='0.0.0.0', port=3001)
+    app.run(host='127.0.0.1', port=3001)

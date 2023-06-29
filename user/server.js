@@ -66,7 +66,7 @@ app.use("/", async (req, res, next) => {
   const defaultProducts = await Product.find({}).limit(12);
 
   // Get recent product via sending request to the Recommend Server
-  await fetch(`http://${process.env.PYTHON_HOST || 'localhost'}: ${process.env.PYTHON_PORT || 3001} / recommend`)
+  await fetch(`${process.env.PYTHON_URI || process.env.PYTHON_LOCALHOST}/recommend`)
     .then(response => response.json())
     .then(data => {
       recentProducts = data;

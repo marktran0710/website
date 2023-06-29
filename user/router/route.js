@@ -129,7 +129,7 @@ router.get('/home', async (req, res, next) => {
     });
 
 
-    await fetch(`http://${process.env.PYTHON_HOST || 'localhost'}:${process.env.PYTHON_PORT || 3001}/recommend`, {
+    await fetch(`${process.env.PYTHON_URI || process.env.PYTHON_LOCALHOST}/recommend`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -221,7 +221,7 @@ router.get('/detail/:productid', async (req, res, next) => {
     let recommendProducts = []
 
     let item = await Product.findOne({ article_id: product_id }).exec();
-    await fetch(`http://${process.env.PYTHON_HOST || "localhost"}:${process.env.PYTHON_PORT || 3001}/recommend`)
+    await fetch(`${process.env.PYTHON_URI || process.env.PYTHON_LOCALHOST}/recommend`)
         .then(response => response.json())
         .then(data => {
             recommendProducts = data;

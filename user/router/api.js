@@ -50,7 +50,7 @@ api.get('/pagination', async (req, res) => {
     const pagination = req.query.page || 1
     let products = []
 
-    await fetch(`http://${process.env.PYTHON_HOST || 'localhost'}:${process.env.PYTHON_PORT || 3001}/recommend`, {
+    await fetch(`${process.env.PYTHON_URI || process.env.PYTHON_LOCALHOST}/recommend`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
